@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 800px;
+  background-image: url(../img/portada1.jpg);
+  background-repeat: no-repeat; }
+
+.padre {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%; }
+  .padre .header {
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap; }
+    .padre .header .menu {
+      display: flex;
+      flex-flow: row nowrap;
+      height: 100px;
+      align-items: center; }
+    .padre .header .logo {
+      flex: 3 1 auto;
+      margin-top: 0px; }
+      .padre .header .logo h1 {
+        margin-left: 30px;
+        font-family: 'Pacifico', cursive;
+        font-size: 40px;
+        font-weight: lighter;
+        line-height: 80px;
+        color: white; }
+    .padre .header .nav {
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+      text-align: right;
+      flex: 6 1 auto;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      margin-left: 150px; }
+      .padre .header .nav a {
+        margin-left: 35px;
+        margin-right: 15px;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease; }
+      .padre .header .nav a:hover {
+        opacity: 80%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px; }
+    .padre .header .texto-principal {
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      .padre .header .texto-principal h1 {
+        flex: 1 1 auto;
+        text-align: center;
+        align-items: flex-end;
+        padding-top: 130px;
+        color: white;
+        font-family: 'Special Elite', cursive;
+        font-size: 50px; }
+      .padre .header .texto-principal p {
+        flex: 1 1 auto;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: 226px; }
+  .padre .section1 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px; }
+    .padre .section1 .iconos {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      .padre .section1 .iconos .img {
+        height: 20px;
+        flex: 1 1 auto;
+        text-align: center; }
+  .padre .section2 {
+    background: rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px; }
+    .padre .section2 .articulos {
+      display: flex;
+      flex-flow: row wrap; }
+      .padre .section2 .articulos .article {
+        flex: 1 1 auto;
+        text-align: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px; }
+  .padre .espacio {
+    height: 150px; }
+  .padre .footer .pie {
+    text-align: right;
+    color: white; }
+
+.inf {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 280px;
+  justify-content: space-evenly;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
+  padding-bottom: 250px;
+  height: 100px; }
+  .inf h3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 120px;
+    font-family: 'Special Elite', cursive;
+    text-align: center; }
+  .inf p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; }
+  .inf .nosotros {
+    display: inline;
+    height: 300px;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; }
+  .inf .mision {
+    display: inline;
+    height: 300px;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; }
+  .inf .vision {
+    display: inline;
+    height: 300px;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; }
+
+.paquetes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
+  .paquetes h2 {
+    display: inline;
+    text-align: center;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    margin-top: 100px; }
+  .paquetes .tabla {
+    margin: 50px auto;
+    width: 600px;
+    margin-top: 50px;
+    margin-bottom: 100px; }
+    .paquetes .tabla table {
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      border-collapse: collapse;
+      border: solid 2px #000036; }
+      .paquetes .tabla table thead {
+        background-color: #001380;
+        border-bottom: solid 5px #000036;
+        color: white; }
+      .paquetes .tabla table tr:nth-child(even) {
+        background-color: #ddd; }
+      .paquetes .tabla table tr:hover td {
+        background-color: #001380;
+        color: white; }
+
+.marco {
+  background-color: rgba(0, 0, 0, 0.5); }
+  .marco #galeria {
+    margin-top: 0;
+    width: 100%; }
+    .marco #galeria h2 {
+      font-family: 'Special Elite', cursive;
+      color: white;
+      padding-top: 30px;
+      text-align: center; }
+    .marco #galeria .galeria {
+      width: 90%;
+      margin: auto;
+      list-style: none;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      .marco #galeria .galeria li {
+        margin: 20px; }
+        .marco #galeria .galeria li img {
+          width: 250px;
+          height: 250px; }
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
+  .contacto .titulo {
+    display: inline;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Special Elite', cursive; }
+    .contacto .titulo h2 {
+      text-align: center; }
+  .contacto form {
+    width: 500px;
+    height: 375px;
+    margin: auto;
+    border: groove 5px white;
+    color: white;
+    font-weight: bol;
+    padding: 20px 50px 20px 70px; }
+    .contacto form input[name="nombres"] {
+      width: 90%; }
+    .contacto form input[name="apellidos"] {
+      width: 90%; }
+    .contacto form input[name="mail"] {
+      width: 90%; }
+    .contacto form textarea {
+      width: 90%;
+      height: 40%; }
+    .contacto form .botones {
+      margin-left: 80px; }
+      .contacto form .botones form {
+        display: inline;
+        color: white;
+        margin-top: 50px;
+        font-family: 'Oswald', sans-serif; }
