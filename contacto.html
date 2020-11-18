@@ -5,72 +5,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Knowing Venezuela</title>
         <link rel="stylesheet" href="CSS/estilo.css">
-        <link rel="stylesheet" href="SCSS/estilo.scss">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald&family=Pacifico&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="padre">
-                <header class="header">
-                    <div class="menu">
-                        <div class="logo">
-                            <h1>Knowing Venezuela</h1>
+        <div class="all">
+            <header>
+                <div class="padre">
+                    <header class="header">
+                        <div class="menu">
+                            <div class="logo">
+                                <h1>Knowing Venezuela</h1>
+                            </div>
+                            <div class="nav">
+                                <a href="index.html">Inicio</a>
+                                <a href="nosotros.html">Nosotros</a>
+                                <a href="paquetes.html">Paquetes</a>
+                                <a href="galeria.html">Galería</a>
+                                <a href="contacto.html">Contacto</a>
+                            </div>
                         </div>
-                        <div class="nav">
-                            <a href="index.html">Inicio</a>
-                            <a href="nosotros.html">Nosotros</a>
-                            <a href="paquetes.html">Paquetes</a>
-                            <a href="galeria.html">Galería</a>
-                            <a href="contacto.html">Contacto</a>
-                        </div>
+                    </header>
+                    <div class="contacto">
+                        <div class="titulo">
+                            <h2>ENVÍANOS TU CONSULTA</h2>
+                        </div>    
+                        <form>
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" name="nombres" required>
+                            <br>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" name="apellidos" required>
+                            <br>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" name="mail" required>
+                            <br>
+                            <select name="estadoCivil">
+                                <option value="soltero/a">Soltero/a</option>
+                                <option value="casado/a">Casado/a</option>
+                                <option value="viudo/a">Viudo/a</option>
+                            </select>
+                            <br>
+                            <br>
+                            <textarea placeholder="Escribe aquí tu consulta"></textarea>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <label for="text">¿Desea recibir las últimas ofertas?</label>
+                            <input type="checkbox" name="acepta" value="1" />
+                            <br>
+                            <br>
+                            <div class="botones">
+                                <form>
+                                    <input type="reset" value="Borrar" name="borrar">
+                                    <input type="submit" value="Enviar" name="enviar">
+                                </form>
+                            </div>
+                        </form>
                     </div>
-                </header>
-                <div class="contacto">
-                    <div class="titulo">
-                        <h2>ENVÍANOS TU CONSULTA</h2>
-                    </div>    
-                    <form>
-                        <label for="nombres">Nombres:</label>
-                        <input type="text" name="nombres" required>
-                        <br>
-                        <label for="apellidos">Apellidos:</label>
-                        <input type="text" name="apellidos" required>
-                        <br>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" name="mail" required>
-                        <br>
-                        <select name="estadoCivil">
-                            <option value="soltero/a">Soltero/a</option>
-                            <option value="casado/a">Casado/a</option>
-                            <option value="viudo/a">Viudo/a</option>
-                        </select>
-                        <br>
-                        <br>
-                        <textarea placeholder="Escribe aquí tu consulta"></textarea>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <label for="text">¿Desea recibir las últimas ofertas?</label>
-                        <input type="checkbox" name="acepta" value="1" />
-                        <br>
-                        <br>
-                        <div class="botones">
-                            <form>
-                                <input type="reset" value="Borrar" name="borrar">
-                                <input type="submit" value="Enviar" name="enviar">
-                            </form>
-                        </div>
-                    </form>
+                    <br>
+                    <br>
+                    <div class="espacio"></div>
+                    <footer class="footer">
+                        <nav class="pie">&copy 2020 Knowing Venezuela. All rights reserved.</nav>
+                    </footer>
                 </div>
-                <br>
-                <br>
-                <div class="espacio"></div>
-                <footer class="footer">
-                    <nav class="pie">&copy 2020 Knowing Venezuela. All rights reserved.</nav>
-                </footer>
-            </div>
-        </header>
+            </header>
+        </div>
     </body>
 </html>
