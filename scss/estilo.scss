@@ -7,87 +7,153 @@ $opaco: rgba(0, 0, 0, 0.5);
 $blanco: white;
 $azulosc: rgb(0, 0, 54);
 $azulcl: rgb(0, 19, 128);
+$negro: black;
 
 .all {
     width: 100%;
-    height: 800px;
+    height: 820px;
     background-image: url(../img/portada1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+header {
+    width: 100%;
+    display: flex;
+    line-height: 60px;
+    #btn-menu {
+        display: none;
+    }
+    label {
+        display: none;
+        width: 65px;
+        height: 65px;
+        padding: 15px;
+        border-right: 1px solid $blanco;
+        &:hover {
+            cursor: pointer;
+            background-color: $opaco;
+        }
+    }
+    h1 {
+        display: flex;
+        margin-left: 30px;
+        font-family: 'Pacifico', cursive;
+        font-size: 35px;
+        font-weight: lighter;
+        color: white;
+        display: inline-flex;
+    }
+    .menu {
+        width: 100%;
+        height: 80px;
+        background-color: $opaco;
+        justify-content: flex-end;
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            width: 70%;
+            margin-left: 50px;
+            justify-content: flex-end;
+        }
+        li {
+            &:hover {
+                background-color: $opaco;
+            }
+            a {
+                display: block;
+                padding: 10px 20px;
+                color: $blanco;
+                text-decoration: none;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media (max-width:1228px) {
+    header {
+        h1 {
+            display: none;
+        }
+        label {
+            display: block;
+            background-color: rgba(85, 116, 255, 0.952);
+            img {
+                padding-bottom: 30px;
+            }
+        }
+        .menu {
+            position: absolute;
+            width: 0;
+            margin-left: -72%;
+            transition: all 0.5s;
+            ul {
+                width: 250px;
+                flex-direction: column;
+                li {
+                    width: 330px;
+                    border-bottom: 1px solid $blanco;
+                    &:hover {
+                        background-color: rgb(0, 0, 0);
+                    }
+                    a {
+                        color: $blanco;
+                        background-color: rgba(85, 116, 255, 0.952);
+                    }
+                }
+            }
+        }
+    }
+}
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+
 .padre {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    .header {
-        margin: 0;
+    .texto-principal {
+        color: $blanco;
         display: flex;
-        flex-flow: column nowrap;
-        .menu {
-            display: flex;
-            flex-flow: row nowrap;
-            height: 100px;
-            align-items: center;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+            flex: 1 1 auto;
+            text-align: center;
+            align-items: flex-end;
+            padding-top: 130px;
+            color: $blanco;
+            font-family: 'Special Elite', cursive;
+            font-size: 50px;
         }
-        .logo {
-            flex: 3 1 auto;
-            margin-top: 0px;
-            h1 {
-                margin-left: 30px;
-                font-family: 'Pacifico', cursive;
-                font-size: 40px;
-                font-weight: lighter;
-                line-height: 80px;
-                color: white;
-            }
-        }
-        .nav {
+        p {
+            flex: 1 1 auto;
             font-family: 'Roboto', sans-serif;
-            text-transform: uppercase;
-            text-align: right;
-            flex: 6 1 auto;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            margin-left: 150px;
-            a {
-                margin-left: 35px;
-                margin-right: 15px;
-                padding: 10px;
-                text-decoration: none;
-                color: $blanco;
-                font-size: 20px;
-                font-weight: bold;
-                -webkit-transition: all 500ms ease;
-                -o-transition: all 500ms ease;
-                transition: all 500ms ease;
-            }
-            a:hover {
-                opacity: 80%;
-                background-color: $opaco;
-                border-radius: 5px;
-            }
+            padding-bottom: 180px;
         }
-        .texto-principal {
-                color: $blanco;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                h1 {
-                    flex: 1 1 auto;
-                    text-align: center;
-                    align-items: flex-end;
-                    padding-top: 130px;
-                    color: $blanco;
-                    font-family: 'Special Elite', cursive;
-                    font-size: 50px;
-                }
-                p {
-                    flex: 1 1 auto;
-                    font-family: 'Roboto', sans-serif;
-                    padding-bottom: 226px;
-                }
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.555);
+        border-radius: 5px;
+        padding: 30px 60px 30px 60px;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 61px;
+        .titulo {
+            font-family: 'Special Elite', cursive;
+            text-align: center;
+        }
+        .botones {
+            text-align: center;
         }
     }
 
@@ -109,6 +175,7 @@ $azulcl: rgb(0, 19, 128);
     .section2 {
         background: $opaco;
         padding-bottom: 10px;
+        margin-bottom: 142px;
         .articulos {
             display: flex;
             flex-flow: row wrap;
@@ -125,13 +192,15 @@ $azulcl: rgb(0, 19, 128);
     }
 
     .espacio {
-        height: 150px;
+        height: 145px;
     }
 
     .footer {
+        background-color: $opaco;
         .pie {
             text-align: right;
             color: $blanco;
+            padding: 10px;
         }
     }
 }
@@ -140,7 +209,7 @@ $azulcl: rgb(0, 19, 128);
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
-    margin-bottom: 280px;
+    margin-bottom: 426px;
     justify-content: space-evenly;
     margin-left: 50px;
     margin-right: 50px;
@@ -191,6 +260,7 @@ $azulcl: rgb(0, 19, 128);
     justify-content: center;
     height: 100%;
     width: 100%;
+    margin-bottom: 79px;
     h2 {
         display: inline;
         text-align: center;
@@ -226,8 +296,8 @@ $azulcl: rgb(0, 19, 128);
 }
 
 .allgallery {
-    background-color: $azulosc;
     .imagenes {
+        margin-bottom: 9px;
         h1{
             font-weight: 400;
             text-align: center;
@@ -248,7 +318,7 @@ $azulcl: rgb(0, 19, 128);
             width: 95%;
             margin: auto;
             grid-gap: 10px;
-            padding: 40px 0;
+            padding: 40px 0 10px 0;
             overflow: hidden;
             a {
                 display: block;
@@ -264,7 +334,7 @@ $azulcl: rgb(0, 19, 128);
                 img {
                     width: 100%;
                     vertical-align: top;
-                    height: 300px;
+                    height: 200px;
                     object-fit: cover;
                     transition: transform 0.5s;
                 }
@@ -328,55 +398,3 @@ $azulcl: rgb(0, 19, 128);
         right: 20px;
     }
 }
-
-.contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    .titulo {
-        display: inline;
-        color: $blanco;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-family: 'Special Elite', cursive;
-        h2 {
-            text-align: center;
-        }
-    }
-    form {
-        width: 500px;
-        height: 375px;
-        margin: auto;
-        border: groove 5px $blanco;
-        color: $blanco;
-        font-weight: bol;
-        padding: 20px 50px 20px 70px;
-        input[name="nombres"] {
-            width: 90%;
-        }
-        input[name="apellidos"] {
-            width: 90%;
-        }
-        input[name="mail"] {
-            width: 90%;
-        }
-        textarea {
-            width: 90%;
-            height: 40%;
-        }
-        .botones {
-            margin-left: 80px;
-            form {
-                display: inline;
-                color: $blanco;
-                margin-top: 50px;
-                font-family: 'Oswald', sans-serif;
-            }
-        }
-    }
-}
-
-
-
